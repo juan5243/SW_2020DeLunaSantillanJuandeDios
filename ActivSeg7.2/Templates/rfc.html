@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Registro</title>
+  </head>
+  <body>
+    <form method='post' action='../Dynamics/validacion.php'>
+      <fieldset>
+        <legend><h1>Ingresa</h1></legend>
+        <p>Nombre(s): <input type='text' name='Nombre' placeholder='Ejemplo: Luis. Juan Carlos' pattern='[a-zA-ZÁÉÍÓÚÑáéíóúñ ]{3,20}' title='Este no es un nombre' required></p>
+        <p>Apellido Paterno: <input type='text' name='apPaterno' placeholder='Ejemplo: Lopez' pattern='[a-zA-ZÁÉÍÓÚÑáéíóúñ ]{3,20}' title='Este no es un apellido' required></p>
+        <p>Apellido Materno: <input type='text' name='apMaterno' placeholder='Ejemplo: Rosas' pattern='[a-zA-ZÁÉÍÓÚÑáéíóúñ ]{3,20}' title='Este no es un apellido' required></p>
+        <p>Fecha de Nacimiento: <input type='date' name='nacimiento'></p>
+        <p>Usuario (RFC): <input type='text' name='RFC' placeholder='Ejemplo: RLH651213' pattern='^[A-ZÑ&]{3,4}\d{6}(?:[A-Z\d]{3})?$' title='Esto no es un RFC' required></p>
+        <p>Colegio:
+          <select name='Colegio'>
+            <optgroup label='I'>
+              <option>Física</option>
+              <option>Informática</option>
+              <option>Matemáticas</option>
+            </optgroup>
+            <optgroup label='II'>
+              <option>Biología</option>
+              <option>Educación_Física</option>
+              <option>Morfología,Fisiología_y_Salud</option>
+              <option>Orientación_Educativa</option>
+              <option>Psicologia_e_Higiene Mental</option>
+              <option>Química</option>
+            </optgroup>
+            <optgroup label='III'>
+              <option>Ciencias_Sociales</option>
+              <option>Geografía</option>
+              <option>Historia</option>
+            </optgroup>
+            <optgroup label='IV'>
+              <option>Alemán</option>
+              <option>Artes Plásticas</option>
+              <option>Danza</option>
+              <option>Dibujo_y_Modelado</option>
+              <option>Filosofía</option>
+              <option>Francés</option>
+              <option>Inglés</option>
+              <option>Italiano</option>
+              <option>Letras_Clásicas</option>
+              <option>Literatura</option>
+              <option>Música</option>
+              <option>Teatro</option>
+            </optgroup>
+            <optgroup label='Otro'>
+              <option>ETE</option>
+            </optgroup>
+          </select>
+        </p>
+        <p>Contraseña:<input type='password' name='pass' placeholder='Minimo 10 caracteres' pattern='[A-Za-z0-9@#$%?¡!&/+-]{10,25}' title='Una contraseña segura tiene uns longitud entre 10 y 25 caracteres, tiene almenos una letra mayúscula o minúscula, un dígito, o los símbolos @ # $ % ? ¡ ! & / + - ' required></p>
+        <input type='submit' value='Registrarse'>
+      </fieldset>
+    </form>
+  </body>
+</html>
