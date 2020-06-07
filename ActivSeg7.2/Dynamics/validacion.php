@@ -103,6 +103,11 @@
       $error_pass = "La clave debe tener al menos un signo";
       return false;
    }
+   if (preg_match('`(123452|1234563|123456789test15|Password6|123456787|Zinch8|g_czechout9|Asdf10|Qwerty11|123456789012|123456713|Aa123456.14|iloveyou15|123416|abc12317|11111118|12312319|dubsmash20|test21|princess22|qwertyuiop23|sunshine24|BvtTest12325|11111)`',$contraseña))
+   {
+      $error_pass = "La clave seleccionada es muy usada";
+      return false;
+   }
    $error_pass = "";
    return true;
  }
